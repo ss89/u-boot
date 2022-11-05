@@ -108,6 +108,15 @@ int exynos_early_init_f(void)
 	return 0;
 }
 
+#ifdef CONFIG_DISPLAY_BOARDINFO
+int checkboard(void)
+{
+	printf("\nBoard: Trats2\n");
+
+	return 0;
+}
+#endif
+
 int exynos_init(void)
 {
 	struct exynos4_power *pwr =
